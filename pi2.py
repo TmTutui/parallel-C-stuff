@@ -1,4 +1,3 @@
-# %%
 import math
 from multiprocessing import Process, Queue
 import time
@@ -23,7 +22,6 @@ def gauss_legendre(num_iterations, output):
     pi_estimate = ((a + b) ** Decimal(2)) / (Decimal(4.0) * t)
     output.put(pi_estimate)
 
-# %%
 if __name__ == '__main__':
     num_iterations = 1000000
     num_processes = 4
@@ -49,4 +47,3 @@ if __name__ == '__main__':
     print(f"Time 1 process: {time.time() - time_start}")
 
     print(f"Estimated value of pi: {pi_estimate}")
-# %%
