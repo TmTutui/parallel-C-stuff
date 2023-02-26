@@ -95,10 +95,10 @@ class MyQueue(Queue):
 
     def elements(self):
         """ Get all elements in the queue without removing them"""
-        self.put(None)
         elements = []
 
-        for item in iter(self.get, None):
+        for i in range(self.size.value):
+            item = self.get()
             elements.append(item)
             self.put(item)
 

@@ -37,13 +37,18 @@ def serveur(serveur_id, command_queue):
 def major_dHomme(command_queue):
     screen = curses.initscr()
     curses.curs_set(0)
-    screen.addstr(0, 0, "Commandes clients en attente: []")
-    screen.addstr(1, 0, f"Nombre de commandes en attente: {command_queue.qsize()}")
+    timestamp = 0
+
+    screen.addstr(0, 0, f"Time: {timestamp}")
+    screen.addstr(1, 0, "Commandes clients en attente: []")
+    screen.addstr(2, 0, f"Nombre de commandes en attente: {command_queue.qsize()}")
     screen.refresh()
 
     while True:
-        screen.addstr(0, 0, "Commandes clients en attente: " + str(command_queue.elements))
-        screen.addstr(1, 0, f"Nombre de commandes en attente: {command_queue.qsize()}")
+        timestamp+=1
+        screen.addstr(0, 0, f"Time: {timestamp}")
+        screen.addstr(1, 0, "Commandes clients en attente: " + str(command_queue.elements()))
+        screen.addstr(2, 0, f"Nombre de commandes en attente: {command_queue.qsize()}")
         screen.refresh()
         time.sleep(1)
 
