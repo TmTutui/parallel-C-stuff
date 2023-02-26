@@ -22,6 +22,7 @@ def gauss_legendre(num_iterations, output):
     pi_estimate = ((a + b) ** Decimal(2)) / (Decimal(4.0) * t)
     output.put(pi_estimate)
 
+
 if __name__ == '__main__':
     num_iterations = 1000000
     num_processes = 4

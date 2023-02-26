@@ -12,6 +12,7 @@ def approx_pi(num_samples):
 
     return 4 * count / num_samples
 
+
 if __name__ == '__main__':
     num_samples = 1000000
     num_processes = 4
