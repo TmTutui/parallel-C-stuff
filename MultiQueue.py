@@ -93,7 +93,7 @@ class MyQueue(Queue):
         return not self.qsize()
 
 
-    def elements(self):
+    def get_all(self):
         """ Get all elements in the queue without removing them"""
         elements = []
 
