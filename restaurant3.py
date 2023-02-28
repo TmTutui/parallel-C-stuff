@@ -81,7 +81,6 @@ def major_dHomme(command_queue, serveur_queue):
 if __name__ == '__main__':
     command_queue = MyQueue(maxsize=10)
     serveur_queue = MyQueue(maxsize=NUM_SERVEURS)
-    # command_queue = multiprocessing.Queue()
 
     client_process = multiprocessing.Process(target=client, args=(command_queue,))
     

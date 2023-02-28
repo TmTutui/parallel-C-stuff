@@ -38,8 +38,6 @@ if __name__ == '__main__':
     for p in processes:
         p.join()
 
-    print(output)
-
     pi_estimate = sum(output.get() for _ in range(num_processes)) / num_processes
     print(f"Time 4 processes: {time.time() - time_start}")
 
